@@ -1,75 +1,113 @@
-/* ═══════════════════════════════════════════════
-   Edu AI — Interactive Scripts
-   ═══════════════════════════════════════════════ */
+document.addEventListener("DOMContentLoaded", () => {
+  const navbar = document.getElementById("navbar");
+  const hamburger = document.getElementById("hamburger");
+  const navLinks = document.getElementById("primary-menu");
+  const navAnchors = navLinks ? navLinks.querySelectorAll("a") : [];
+  const faqButtons = document.querySelectorAll(".faq-question");
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-document.addEventListener('DOMContentLoaded', () => {
+  const setMenuState = (isOpen) => {
+    if (!hamburger || !navLinks) return;
 
-  // ─── 1. Navbar scroll effect ───
-  const navbar = document.getElementById('navbar');
+    hamburger.classList.toggle("active", isOpen);
+    navLinks.classList.toggle("active", isOpen);
+    hamburger.setAttribute("aria-expanded", String(isOpen));
+    document.body.classList.toggle("menu-open", isOpen);
+  };
 
   const handleScroll = () => {
-    if (window.scrollY > 40) {
-      navbar.classList.add('scrolled');
-    } else {
-      navbar.classList.remove('scrolled');
-    }
+    if (!navbar) return;
+    navbar.classList.toggle("scrolled", window.scrollY > 32);
   };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
+  window.addEventListener("scroll", handleScroll, { passive: true });
   handleScroll();
 
-  // ─── 2. Mobile hamburger menu ───
-  const hamburger = document.getElementById('hamburger');
-  const navLinks = document.querySelector('.nav-links');
-
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-  });
-
-  // Close menu when a nav link is clicked
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      hamburger.classList.remove('active');
-      navLinks.classList.remove('active');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener("click", () => {
+      const isExpanded = hamburger.getAttribute("aria-expanded") === "true";
+      setMenuState(!isExpanded);
     });
-  });
 
-  // ─── 3. Smooth scroll for anchor links ───
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', (e) => {
-      const targetId = anchor.getAttribute('href');
-      if (targetId === '#') return;
+    navAnchors.forEach((link) => {
+      link.addEventListener("click", () => setMenuState(false));
+    });
+
+    document.addEventListener("click", (event) => {
+      const target = event.target;
+      if (
+        navLinks.classList.contains("active") &&
+        target instanceof Node &&
+        !navLinks.contains(target) &&
+        !hamburger.contains(target)
+      ) {
+        setMenuState(false);
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        setMenuState(false);
+      }
+    });
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", (event) => {
+      const targetId = anchor.getAttribute("href");
+      if (!targetId || targetId === "#") return;
 
       const target = document.querySelector(targetId);
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (!target) return;
+
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+        block: "start"
+      });
+    });
+  });
+
+  faqButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      const item = button.closest(".faq-item");
+      const isOpen = button.getAttribute("aria-expanded") === "true";
+
+      faqButtons.forEach((otherButton) => {
+        otherButton.setAttribute("aria-expanded", "false");
+        otherButton.closest(".faq-item")?.classList.remove("open");
+      });
+
+      if (!isOpen && item) {
+        button.setAttribute("aria-expanded", "true");
+        item.classList.add("open");
       }
     });
   });
 
-  // ─── 4. Fade-in on scroll (Intersection Observer) ───
-  const fadeTargets = document.querySelectorAll(
-    '.card, .why-item, .cohort-item, .syllabus-item, .contact-card, .why-quote, .form-embed'
-  );
+  if (!prefersReducedMotion) {
+    const fadeTargets = document.querySelectorAll(
+      ".feature-card, .card, .outcome-item, .outcomes-panel, .mentor-card, .cohort-item, .syllabus-item, .pricing-card, .faq-item, .blog-card, .contact-card, .mini-card"
+    );
 
-  fadeTargets.forEach(el => el.classList.add('fade-in'));
+    fadeTargets.forEach((element) => element.classList.add("fade-in"));
 
-  const observerOptions = {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
-  };
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15,
+        rootMargin: "0px 0px -40px 0px"
       }
-    });
-  }, observerOptions);
+    );
 
-  fadeTargets.forEach(el => observer.observe(el));
-
+    fadeTargets.forEach((element) => observer.observe(element));
+  }
 });
