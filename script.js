@@ -86,9 +86,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // ── Program Tab Switching ──
+  const programTabs = document.querySelectorAll(".program-tab");
+  const programPanels = document.querySelectorAll(".program-panel");
+
+  programTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const targetId = tab.getAttribute("aria-controls");
+
+      programTabs.forEach((t) => {
+        t.classList.remove("active");
+        t.setAttribute("aria-selected", "false");
+      });
+
+      programPanels.forEach((p) => {
+        p.classList.remove("active");
+        p.setAttribute("hidden", "");
+      });
+
+      tab.classList.add("active");
+      tab.setAttribute("aria-selected", "true");
+
+      const targetPanel = document.getElementById(targetId);
+      if (targetPanel) {
+        targetPanel.classList.add("active");
+        targetPanel.removeAttribute("hidden");
+      }
+    });
+  });
+
   if (!prefersReducedMotion) {
     const fadeTargets = document.querySelectorAll(
-      ".feature-card, .card, .outcome-item, .outcomes-panel, .mentor-card, .cohort-item, .syllabus-item, .pricing-card, .faq-item, .blog-card, .contact-card, .mini-card"
+      ".feature-card, .card, .outcome-item, .outcomes-panel, .mentor-card, .cohort-item, .syllabus-item, .pricing-card, .faq-item, .blog-card, .contact-card, .mini-card, .program-overview, .program-tabs, .program-tools"
     );
 
     fadeTargets.forEach((element) => element.classList.add("fade-in"));
