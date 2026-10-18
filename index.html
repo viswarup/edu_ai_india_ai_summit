@@ -4,391 +4,1008 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Edu AI Summit | Premium Live AI Cohorts &amp; Workshops</title>
+    <title>Micro School | AI Engineering for Real-World Applications</title>
     <meta name="description"
-        content="Build core AI skills through premium live cohorts and workshops for students and working professionals. Learn with IIT and industry mentors, master Claude Code, and ship a capstone project." />
-    <meta name="theme-color" content="#081225" />
-    <meta property="og:title" content="Edu AI Summit | Build Core AI Skills Live" />
+        content="Build a real AI application in 6 weeks. Master LLM app engineering, Document AI, RAG, evaluation, and bounded agent workflows with 1-on-1 mentorship in an 8-12 person cohort." />
+    <meta name="theme-color" content="#0a1628" />
+    <meta property="og:title" content="Micro School | AI Engineering for Real-World Applications" />
     <meta property="og:description"
-        content="5 week live AI cohorts and workshops for students and corporate professionals. Weekend classes, limited seats, real-world industry projects, and IIT plus industry mentors." />
+        content="Build core AI skills with live mentors and real world projects. 6-week live cohort limited to 8-12 learners. Founding cohort ₹19,900." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.eduai.co.in" />
+    <meta property="og:url" content="https://www.microschool.ai" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Edu AI Summit | Premium Live AI Cohorts &amp; Workshops" />
+    <meta name="twitter:title" content="Micro School | AI Engineering for Real-World Applications" />
     <meta name="twitter:description"
-        content="Premium live AI training for students and professionals. Weekend sessions, capstone project, Claude Code, and limited seats." />
-    <link rel="canonical" href="https://www.eduai.co.in" />
+        content="Build a real AI application in 6 weeks. Learn skills you can use at work or showcase in interviews." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
         rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Course",
-            "name": "Edu AI Summit",
-            "description": "Live AI cohorts and workshops for students and working professionals who want to build core AI skills.",
-            "provider": {
-                "@type": "Organization",
-                "name": "Edu AI",
-                "url": "https://www.eduai.co.in"
-            },
-            "educationalCredentialAwarded": "Capstone project completion",
-            "offers": {
-                "@type": "Offer",
-                "price": "5999",
-                "priceCurrency": "INR"
-            }
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "AI Engineering for Real-World Applications",
+        "description": "A 6-week hands-on live engineering cohort where you build, evaluate, and deploy a real LLM application and explain its technical trade-offs.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Micro School",
+            "url": "https://www.microschool.ai"
+        },
+        "timeRequired": "P6W",
+        "offers": {
+            "@type": "Offer",
+            "price": "19900",
+            "priceCurrency": "INR",
+            "availability": "https://schema.org/LimitedAvailability"
         }
+    }
     </script>
 </head>
 
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
+    <!-- Top Announcement Bar (Poster Top Right Badge) -->
+    <div class="top-announcement-bar">
+        <div class="container top-bar-inner">
+            <div class="live-badge">
+                <span class="live-pulse-dot"></span>
+                <span class="badge-bold">Live Online Cohort</span>
+                <span class="badge-divider">|</span>
+                <span>Hands-on Labs</span>
+                <span class="badge-divider">|</span>
+                <span>Mentorship</span>
+                <span class="badge-divider">|</span>
+                <span>Real Projects</span>
+            </div>
+            <div class="top-bar-cta">
+                <span class="seats-alert">Next batch starting soon • <strong>Only 8–12 seats</strong></span>
+                <a href="https://forms.gle/cm8m2CEvvQC9V5Xk9" target="_blank" rel="noopener noreferrer" class="top-bar-link">Apply Now &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
     <header class="site-header">
-        <nav id="navbar" aria-label="Primary">
+        <nav id="navbar" aria-label="Primary Navigation">
             <div class="nav-container">
-                <a href="#hero" class="nav-logo">Edu <span>AI</span></a>
+                <a href="#hero" class="nav-brand">
+                    <div class="brand-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                    </div>
+                    <div class="brand-text">
+                        <span class="brand-name">Micro School</span>
+                        <span class="brand-tagline">PRACTICAL SKILLS. REAL IMPACT.</span>
+                    </div>
+                </a>
+
                 <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false"
                     aria-controls="primary-menu" type="button">
                     <span></span><span></span><span></span>
                 </button>
+
                 <ul class="nav-links" id="primary-menu">
+                    <li><a href="#curriculum">6-Week Journey</a></li>
+                    <li><a href="#capstone">Capstone Project</a></li>
                     <li><a href="#audience">Who It's For</a></li>
-                    <li><a href="#programs">Program</a></li>
+                    <li><a href="#philosophy">Cut vs Keep</a></li>
+                    <li><a href="#skills">Key Skills</a></li>
                     <li><a href="#instructors">Instructors</a></li>
                     <li><a href="#pricing">Pricing</a></li>
                     <li><a href="#faq">FAQ</a></li>
                     <li><a href="https://forms.gle/cm8m2CEvvQC9V5Xk9" target="_blank" rel="noopener noreferrer"
-                            class="nav-cta">Apply Now</a></li>
+                            class="nav-cta-btn">Join Cohort</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main id="main-content">
-        <section id="hero" aria-labelledby="hero-title">
-            <div class="hero-bg-shapes" aria-hidden="true">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
-                <div class="shape shape-3"></div>
-                <div class="shape shape-4"></div>
-            </div>
-            <div class="container hero-shell">
-                <div class="hero-copy">
-                    <p class="hero-eyebrow">Premium Live AI Cohorts And Workshops</p>
-                    <h1 class="hero-title" id="hero-title">Build core <span class="highlight">AI skills</span> with live mentors.</h1>
-                    <p class="hero-subtitle">Practical AI capability for students and professionals — no coding or AI background needed.</p>
-                    <div class="hero-proof">
-                        <span>Next cohort starts 25 May 2026</span>
-                        <span class="proof-highlight">Only 10 seats per cohort</span>
-                    </div>
-                    <div class="hero-ctas">
-                        <a href="https://forms.gle/cm8m2CEvvQC9V5Xk9" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-primary">Apply for the May Cohort</a>
-                        <a href="https://wa.me/919220711331" target="_blank" rel="noopener noreferrer"
-                            class="btn btn-secondary">Talk on WhatsApp</a>
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-kicker">
+                        <span class="kicker-pill">Founding Cohort • Limited to 8–12 Learners</span>
                     </div>
 
+                    <h1 class="hero-title">
+                        AI Engineering <br />
+                        <span class="hero-gradient-text">for Real-World Applications</span>
+                    </h1>
+
+                    <p class="hero-lead">
+                        Build a real AI application in 6 weeks. Learn skills you can use at work or showcase in interviews.
+                    </p>
+
+                    <p class="hero-sublead">
+                        Build core AI skills with live mentors and real world projects. Master LLM application architecture, Document AI, grounded RAG, automated evaluation, and bounded agent workflows.
+                    </p>
+
+                    <!-- 4 Core Feature Badges (Matching Poster) -->
+                    <div class="hero-feature-pills">
+                        <div class="feature-pill pill-purple">
+                            <div class="pill-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                            </div>
+                            <span class="pill-title">Live Classes</span>
+                        </div>
+
+                        <div class="feature-pill pill-emerald">
+                            <div class="pill-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                            </div>
+                            <span class="pill-title">Hands-on Projects</span>
+                        </div>
+
+                        <div class="feature-pill pill-orange">
+                            <div class="pill-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <span class="pill-title">Small Cohort <span class="subtext">(8–12)</span></span>
+                        </div>
+
+                        <div class="feature-pill pill-blue">
+                            <div class="pill-icon">
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                            </div>
+                            <span class="pill-title">Mentorship</span>
+                        </div>
+                    </div>
+
+                    <!-- Hero CTAs -->
+                    <div class="hero-actions">
+                        <a href="https://forms.gle/cm8m2CEvvQC9V5Xk9" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large shadow-pulse">
+                            <span>Join the Next Cohort</span>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                        </a>
+                        <a href="https://wa.me/919938883652?text=Hi%2C%20I%20have%20questions%20about%20the%20Micro%20School%20AI%20Engineering%20Cohort." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                            <span>Talk to Instructors</span>
+                        </a>
+                    </div>
                 </div>
-                <aside class="hero-panel" aria-label="Program overview">
-                    <div class="hero-panel-card glass-card">
-                        <p class="panel-label">Program Snapshot</p>
-                        <h2>What you get</h2>
-                        <ul class="panel-list">
-                            <li>5-week live cohort, weekends</li>
-                            <li>Claude Code / Codex / Antigravity subscription included</li>
-                            <li>Real-world industry projects + mentor feedback</li>
-                            <li>Fee: Rs. 5,999</li>
-                        </ul>
-                    </div>
 
-                </aside>
+                <!-- HERO RIGHT: Laptop Device Mockup Showing "Document AI" App -->
+                <div class="hero-mockup-wrapper">
+                    <div class="laptop-device">
+                        <div class="laptop-screen-frame">
+                            <div class="screen-webcam"></div>
+                            <div class="laptop-display">
+                                <!-- App Header -->
+                                <div class="app-header">
+                                    <div class="app-brand">
+                                        <div class="app-logo-icon">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                        </div>
+                                        <span class="app-title">Document AI</span>
+                                    </div>
+                                    <div class="app-window-controls">
+                                        <span class="ctrl-dot red"></span>
+                                        <span class="ctrl-dot yellow"></span>
+                                        <span class="ctrl-dot green"></span>
+                                    </div>
+                                </div>
+
+                                <!-- App Body -->
+                                <div class="app-layout">
+                                    <!-- Sidebar -->
+                                    <aside class="app-sidebar">
+                                        <div class="sidebar-item">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                                            <span>Upload</span>
+                                        </div>
+                                        <div class="sidebar-item">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                            <span>Ask</span>
+                                        </div>
+                                        <div class="sidebar-item">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                                            <span>Extract</span>
+                                        </div>
+                                        <div class="sidebar-item active">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                            <span>Compliance</span>
+                                        </div>
+                                        <div class="sidebar-item">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                                            <span>Workflow</span>
+                                        </div>
+                                    </aside>
+
+                                    <!-- Main Document Viewer -->
+                                    <div class="app-main-pane">
+                                        <div class="doc-tab">
+                                            <span class="pdf-icon">PDF</span>
+                                            <span class="doc-filename">Vendor_Bid.pdf</span>
+                                            <span class="doc-status-badge">Parsed 14 pgs</span>
+                                        </div>
+
+                                        <div class="doc-sheet-preview">
+                                            <div class="doc-header-line"></div>
+                                            <div class="doc-text-skeleton">
+                                                <div class="sk-line w-85"></div>
+                                                <div class="sk-line w-100 highlight-yellow"></div>
+                                                <div class="sk-line w-75"></div>
+                                                <div class="sk-line w-90 highlight-green"></div>
+                                                <div class="sk-line w-60"></div>
+                                                <div class="sk-line w-95"></div>
+                                                <div class="sk-line w-80 highlight-yellow"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Right Compliance Panel -->
+                                    <div class="app-compliance-pane">
+                                        <div class="pane-heading">
+                                            <h6>Compliance Check</h6>
+                                            <span class="live-indicator"></span>
+                                        </div>
+
+                                        <div class="check-list">
+                                            <div class="check-row success">
+                                                <span class="check-bullet">&check;</span>
+                                                <span class="check-text">Technical criteria</span>
+                                            </div>
+                                            <div class="check-row success">
+                                                <span class="check-bullet">&check;</span>
+                                                <span class="check-text">Financial requirements</span>
+                                            </div>
+                                            <div class="check-row warning">
+                                                <span class="check-bullet">!</span>
+                                                <span class="check-text">Missing documents</span>
+                                            </div>
+                                            <div class="check-row success">
+                                                <span class="check-bullet">&check;</span>
+                                                <span class="check-text">Eligibility criteria</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="compliance-summary-box">
+                                            <span class="summary-label">Summary</span>
+                                            <span class="summary-status-tag">Overall: Partially Compliant</span>
+                                            <button type="button" class="btn-app-action">View Details &rarr;</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="laptop-base">
+                            <div class="laptop-notch"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-
-        <!-- 1. WHO IT'S FOR -->
-        <section id="audience" class="section-light" aria-labelledby="audience-title">
+        <!-- SECTION: YOUR 6-WEEK LEARNING JOURNEY (Matching Poster Exactly) -->
+        <section id="curriculum" class="section-light curriculum-section">
             <div class="container">
-                <div class="section-heading">
-                    <p class="section-kicker">Who It's For</p>
-                    <h2 class="section-title" id="audience-title">Built for ambitious learners who want real AI skill, fast.</h2>
-                    <p class="section-subtitle">Be it students, working professionals, entrepreneurs, or anyone looking to build real AI systems. No prior experience in coding, ML, or AI required.</p>
+                <div class="section-heading text-center">
+                    <p class="section-kicker">Structured Curriculum</p>
+                    <h2 class="section-title">Your <span class="text-primary-highlight">6-Week</span> Learning Journey</h2>
+                    <p class="section-subtitle">
+                        Structured around four core capabilities: <strong>Build</strong>, <strong>Retrieve</strong>, <strong>Evaluate</strong>, and <strong>Deploy</strong>. Agents become a controlled, bounded extension of these capabilities—not untestable magic.
+                    </p>
+                </div>
+
+                <!-- 6-Week Timeline Grid with Connector Arrows -->
+                <div class="journey-grid">
+                    <!-- Week 1 -->
+                    <div class="journey-card card-blue-soft">
+                        <div class="step-header">
+                            <div class="step-badge badge-blue">1</div>
+                            <span class="week-label">Week 1</span>
+                        </div>
+                        <h3 class="step-title">LLM Application Basics</h3>
+                        <div class="step-icon-box bg-blue-tint">
+                            <div class="icon-doc-code">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#1d70b8" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M10 13l-2 2 2 2"/><path d="M14 13l2 2-2 2"/></svg>
+                            </div>
+                        </div>
+                        <p class="step-summary">Extract structured data</p>
+                        <div class="step-details">
+                            <p class="step-topics"><strong>Focus:</strong> Python &middot; APIs &middot; Pydantic &middot; Structured outputs &middot; Retries &amp; basic unit tests</p>
+                            <div class="deliverable-tag">
+                                <strong>Deliverable:</strong> A reliable, schema-validated extraction service API.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journey-connector">&rarr;</div>
+
+                    <!-- Week 2 -->
+                    <div class="journey-card card-teal-soft">
+                        <div class="step-header">
+                            <div class="step-badge badge-teal">2</div>
+                            <span class="week-label">Week 2</span>
+                        </div>
+                        <h3 class="step-title">Document AI &amp; RAG</h3>
+                        <div class="step-icon-box bg-teal-tint">
+                            <div class="icon-doc-search">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#008080" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><circle cx="11.5" cy="14.5" r="3.5"/><line x1="14" y1="17" x2="17" y2="20"/></svg>
+                            </div>
+                        </div>
+                        <p class="step-summary">Search and answer with sources</p>
+                        <div class="step-details">
+                            <p class="step-topics"><strong>Focus:</strong> PDF parsing &middot; Chunking strategies &middot; Embeddings &middot; Vector retrieval &middot; BM25 hybrid search &middot; Source citations</p>
+                            <div class="deliverable-tag">
+                                <strong>Deliverable:</strong> A working document assistant with strict source grounding.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journey-connector">&rarr;</div>
+
+                    <!-- Week 3 -->
+                    <div class="journey-card card-amber-soft">
+                        <div class="step-header">
+                            <div class="step-badge badge-amber">3</div>
+                            <span class="week-label">Week 3</span>
+                        </div>
+                        <h3 class="step-title">Evaluation &amp; Improvement</h3>
+                        <div class="step-icon-box bg-amber-tint">
+                            <div class="icon-chart-eval">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#b58105" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="4 8 10 2 16 8 22 2"/></svg>
+                            </div>
+                        </div>
+                        <p class="step-summary">Measure quality and compare models</p>
+                        <div class="step-details">
+                            <p class="step-topics"><strong>Focus:</strong> Golden test datasets &middot; Retrieval metrics &middot; Categorizing failures &middot; Cost vs latency vs quality &middot; Cost-aware model routing</p>
+                            <div class="deliverable-tag">
+                                <strong>Deliverable:</strong> A reproducible evaluation report &amp; automated regression suite.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journey-connector">&rarr;</div>
+
+                    <!-- Week 4 -->
+                    <div class="journey-card card-purple-soft">
+                        <div class="step-header">
+                            <div class="step-badge badge-purple">4</div>
+                            <span class="week-label">Week 4</span>
+                        </div>
+                        <h3 class="step-title">AI Workflows &amp; Agents</h3>
+                        <div class="step-icon-box bg-purple-tint">
+                            <div class="icon-workflow-nodes">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7030a0" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="6" height="6" rx="1"/><rect x="16" y="3" width="6" height="6" rx="1"/><rect x="9" y="15" width="6" height="6" rx="1"/><path d="M5 9v3a2 2 0 0 0 2 2h5m5-5v3a2 2 0 0 1-2 2h-5"/><line x1="12" y1="14" x2="12" y2="15"/></svg>
+                            </div>
+                        </div>
+                        <p class="step-summary">Multi-step workflows with human approval</p>
+                        <div class="step-details">
+                            <p class="step-topics"><strong>Focus:</strong> Tool calling &middot; State machines &middot; Bounded flows &middot; LangGraph for state &amp; checkpoints &middot; MCP demo &middot; Human escalation</p>
+                            <div class="deliverable-tag">
+                                <strong>Deliverable:</strong> A stateful workflow that completes tasks &amp; safely pauses for approvals.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journey-connector">&rarr;</div>
+
+                    <!-- Week 5 -->
+                    <div class="journey-card card-red-soft">
+                        <div class="step-header">
+                            <div class="step-badge badge-red">5</div>
+                            <span class="week-label">Week 5</span>
+                        </div>
+                        <h3 class="step-title">Security &amp; Observability</h3>
+                        <div class="step-icon-box bg-red-tint">
+                            <div class="icon-shield-safe">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><circle cx="12" cy="11" r="3"/></svg>
+                            </div>
+                        </div>
+                        <p class="step-summary">Make it safe and reliable</p>
+                        <div class="step-details">
+                            <p class="step-topics"><strong>Focus:</strong> Diagnosing failed runs &middot; Tracing &middot; Prompt injection testing &middot; Malformed input checks &middot; Secret management &middot; Access controls</p>
+                            <div class="deliverable-tag">
+                                <strong>Deliverable:</strong> A hardened application with documented security boundaries.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="journey-connector">&rarr;</div>
+
+                    <!-- Week 6 -->
+                    <div class="journey-card card-cyan-soft">
+                        <div class="step-header">
+                            <div class="step-badge badge-cyan">6</div>
+                            <span class="week-label">Week 6</span>
+                        </div>
+                        <h3 class="step-title">Deploy &amp; Demonstrate</h3>
+                        <div class="step-icon-box bg-cyan-tint">
+                            <div class="icon-cloud-deploy">
+                                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#007791" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><polyline points="12 12 12 16 12 12"/><polyline points="9 13 12 10 15 13"/></svg>
+                            </div>
+                        </div>
+                        <p class="step-summary">Deploy your app and present it</p>
+                        <div class="step-details">
+                            <p class="step-topics"><strong>Focus:</strong> FastAPI &middot; Docker packaging &middot; Accessible cloud deployment &middot; Cost &amp; latency profiling &middot; Engineering trade-off defense</p>
+                            <div class="deliverable-tag">
+                                <strong>Deliverable:</strong> Deployed live app &middot; GitHub repository &middot; Benchmark report &middot; Demo.
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 2. PROGRAM -->
-        <section id="programs" class="section-light" aria-labelledby="programs-title">
+        <!-- SPLIT SECTION: CAPSTONE PROJECT & WHO IS THIS FOR (Matching Poster Layout) -->
+        <section id="capstone" class="section-tint capstone-audience-section">
+            <div class="container split-grid">
+                <!-- LEFT COLUMN: CAPSTONE PROJECT -->
+                <div class="capstone-card-dark">
+                    <div class="capstone-header">
+                        <span class="capstone-pill">Production Reference System</span>
+                        <h2 class="capstone-title">Capstone Project</h2>
+                        <h3 class="capstone-subtitle">AI-Powered Document Compliance &amp; Workflow Engine</h3>
+                        <p class="capstone-desc">
+                            Build an end-to-end intelligent compliance engine that ingests unstructured vendor proposals, RFPs, or enterprise contracts, validates criteria against regulatory rules, and triggers automated multi-step workflows.
+                        </p>
+                    </div>
+
+                    <!-- Visual Flow Diagram inside Capstone Card -->
+                    <div class="capstone-diagram-container">
+                        <!-- Step 1: Input Document -->
+                        <div class="diagram-doc-stack">
+                            <div class="doc-card card-under"></div>
+                            <div class="doc-card card-top">
+                                <div class="doc-card-badge">PDF</div>
+                                <span class="doc-name">Vendor Proposal</span>
+                                <div class="doc-lines">
+                                    <span></span><span></span><span></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flow-arrow">&rarr;</div>
+
+                        <!-- Step 2: Engine Preview -->
+                        <div class="diagram-engine-screen">
+                            <div class="screen-topbar">
+                                <span class="screen-dot"></span>
+                                <span class="screen-title">Document AI</span>
+                            </div>
+                            <div class="screen-grid">
+                                <div class="results-col">
+                                    <div class="col-title">Compliance Results</div>
+                                    <div class="pill-tag tag-green">&check; Compliant</div>
+                                    <div class="pill-tag tag-yellow">! Partially Compliant</div>
+                                    <div class="pill-tag tag-red">&times; Missing</div>
+                                </div>
+                                <div class="data-col">
+                                    <div class="col-title">Extracted Data</div>
+                                    <div class="data-row">Company: Acme Tech</div>
+                                    <div class="data-row">Total Value: ,000</div>
+                                    <div class="data-row">Validity: 90 Days</div>
+                                    <div class="data-row">Specs: ISO 27001</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flow-arrow">&rarr;</div>
+
+                        <!-- Step 3: Interactive Action Chips -->
+                        <div class="diagram-pipeline-actions">
+                            <div class="action-chip chip-extract">Extract</div>
+                            <div class="action-chip chip-search">Search</div>
+                            <div class="action-chip chip-reason">Reason</div>
+                            <div class="action-chip chip-approve">Approve</div>
+                        </div>
+                    </div>
+
+                    <!-- Dual Track Customization -->
+                    <div class="capstone-dual-track">
+                        <div class="track-box">
+                            <h6>🏢 For Enterprise &amp; Working Professionals</h6>
+                            <p>Adapt the reference project to your company's domain: internal knowledge search, contract review, policy audits, or automated operations with measurable ROI.</p>
+                        </div>
+                        <div class="track-box">
+                            <h6>💼 For Job Seekers &amp; Career Pivoters</h6>
+                            <p>Build a portfolio-grade repository with automated tests, benchmark metrics, clear architectural diagrams, and weekly interview trade-off walkthroughs.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: WHO IS THIS FOR? -->
+                <div class="audience-card-light" id="audience">
+                    <div class="audience-header">
+                        <p class="section-kicker">Target Audience</p>
+                        <h2 class="audience-title">Who Is This For?</h2>
+                        <p class="audience-desc">Built for individuals who want to move past superficial prompt engineering and build reliable systems that solve real business problems.</p>
+                    </div>
+
+                    <div class="audience-list">
+                        <!-- Working Professionals -->
+                        <div class="audience-item">
+                            <div class="audience-icon-wrap icon-user-blue">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            </div>
+                            <div class="audience-text">
+                                <h3>Working Professionals</h3>
+                                <p class="audience-tagline">Apply AI to your real work</p>
+                                <p class="audience-body">Implement enterprise knowledge assistants, automated document processing, and bounded workflows that reduce manual overhead inside your organization.</p>
+                            </div>
+                        </div>
+
+                        <!-- Job Seekers -->
+                        <div class="audience-item">
+                            <div class="audience-icon-wrap icon-chart-green">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="4 8 10 2 16 8 22 2"/></svg>
+                            </div>
+                            <div class="audience-text">
+                                <h3>Job Seekers &amp; Engineers</h3>
+                                <p class="audience-tagline">Build a strong portfolio</p>
+                                <p class="audience-body">Walk into technical interviews with a deployed application, evaluation benchmarks, and the confidence to justify trade-offs across cost, latency, and quality.</p>
+                            </div>
+                        </div>
+
+                        <!-- Founders -->
+                        <div class="audience-item">
+                            <div class="audience-icon-wrap icon-team-purple">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                            </div>
+                            <div class="audience-text">
+                                <h3>Founders &amp; Business Professionals</h3>
+                                <p class="audience-tagline">Prototype and validate ideas</p>
+                                <p class="audience-body">Quickly build production-ready AI MVPs without getting lost in fragile multi-agent frameworks or burning budget on premature optimizations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="audience-guarantee-note">
+                        <span class="note-badge">Dual Value</span>
+                        <p>Weekly interview practice for job seekers &amp; weekly organizational application scoping for professionals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CURRICULUM PHILOSOPHY (CUT VS KEEP VS SIMPLIFY) -->
+        <section id="philosophy" class="section-light philosophy-section">
             <div class="container">
-                <div class="section-heading">
-                    <p class="section-kicker">Program</p>
-                    <h2 class="section-title" id="programs-title">AI Systems Builder Program</h2>
-                    <p class="section-subtitle">From Machine Learning to LLMs and Agents — build real-world AI systems in 5 weeks.</p>
+                <div class="section-heading text-center">
+                    <p class="section-kicker">Our Engineering Philosophy</p>
+                    <h2 class="section-title">What We Cut, Keep, and Simplify</h2>
+                    <p class="section-subtitle">
+                        Most courses try to teach 15 tools in six weeks. That produces learners who have touched 15 libraries but cannot confidently build, debug, or deploy a single reliable system. Here is our deliberate curriculum design:
+                    </p>
                 </div>
 
-                <div class="program-overview">
-                    <div class="program-overview-text">
-                        <p>A hands-on, project-driven course focused on practical system design, deployment, and real-world use cases. Build and deploy production-ready AI solutions using Claude Code.</p>
-                    </div>
-                    <div class="program-outcomes-mini">
-                        <p class="outcomes-mini-title">You'll leave with:</p>
-                        <ul>
-                            <li>3–4 end-to-end AI projects</li>
-                            <li>A deployed ML system &amp; working RAG app</li>
-                            <li>A functional AI agent</li>
-                            <li>A portfolio of real-world AI systems</li>
-                        </ul>
-                    </div>
+                <div class="table-responsive">
+                    <table class="philosophy-table">
+                        <thead>
+                            <tr>
+                                <th>Core Topic</th>
+                                <th>Decision</th>
+                                <th>Engineering Rationale</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Python, APIs, Pydantic, Error Handling</strong></td>
+                                <td><span class="status-badge badge-keep">Keep</span></td>
+                                <td>Essential for building reliable applications that don't crash on malformed LLM responses.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>PDF Parsing, Extraction, Grounded RAG</strong></td>
+                                <td><span class="status-badge badge-keep">Keep</span></td>
+                                <td>Teaches a practical, transferable AI use case applicable across enterprise industries.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hybrid Search, BM25, Embeddings</strong></td>
+                                <td><span class="status-badge badge-simplify">Simplify</span></td>
+                                <td>Teach the fundamental intuition and one robust, production-working implementation.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Cross-Encoder Rerankers</strong></td>
+                                <td><span class="status-badge badge-optional">Optional</span></td>
+                                <td>A useful precision optimization, but not essential to shipping your first working baseline.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Model Routing (Cost, Latency, Quality)</strong></td>
+                                <td><span class="status-badge badge-simplify">Simplify</span></td>
+                                <td>Teach pragmatic model selection instead of fragile three-tier cascading heuristics.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>LangGraph &amp; Stateful Workflows</strong></td>
+                                <td><span class="status-badge badge-keep">Keep Narrowly</span></td>
+                                <td>Critical for controlled, predictable multi-step state execution and checkpointing.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Model Context Protocol (MCP)</strong></td>
+                                <td><span class="status-badge badge-optional">Optional Demo</span></td>
+                                <td>Tool integration is important; mastering protocol minutiae is secondary to system stability.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Multi-Agent Swarm Orchestration</strong></td>
+                                <td><span class="status-badge badge-cut">Cut</span></td>
+                                <td>Adds debugging chaos and cost before learners have mastered single-agent reliability.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Evaluation &amp; Golden Datasets</strong></td>
+                                <td><span class="status-badge badge-keep">Keep &amp; Early</span></td>
+                                <td>The single most critical skill for enterprise credibility and technical interview defense.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Tracing &amp; Observability</strong></td>
+                                <td><span class="status-badge badge-simplify">Simplify</span></td>
+                                <td>Master one observability tool and the practical ability to diagnose and fix a failed run.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Prompt Injection &amp; Access Controls</strong></td>
+                                <td><span class="status-badge badge-keep">Keep</span></td>
+                                <td>Vital for enterprise security, safety compliance, and protecting sensitive corporate data.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>FastAPI, Docker &amp; API Deployment</strong></td>
+                                <td><span class="status-badge badge-keep">Keep</span></td>
+                                <td>Turns your code from a Jupyter notebook toy into a usable, demonstrable web application.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Complex Kubernetes &amp; Cloud CI/CD</strong></td>
+                                <td><span class="status-badge badge-cut">Cut</span></td>
+                                <td>DevOps infrastructure rabbit hole that distracts from core AI application engineering.</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
 
-                <div class="syllabus-grid">
-                    <article class="syllabus-item">
-                        <div class="syllabus-badge">Module 0</div>
-                        <h3>Thinking Like an AI Builder</h3>
-                        <p>When to use AI (and when not to). System thinking vs model thinking. Real-world constraints: cost, latency, reliability.</p>
-                    </article>
-                    <article class="syllabus-item">
-                        <div class="syllabus-badge">Module 1</div>
-                        <h3>Machine Learning Systems</h3>
-                        <p>Claude Code setup, problem framing, feature engineering, model evaluation, and deployment fundamentals. Build a prediction or demand forecasting system.</p>
-                    </article>
-                    <article class="syllabus-item">
-                        <div class="syllabus-badge">Module 2</div>
-                        <h3>NLP &amp; LLM Foundations</h3>
-                        <p>Traditional NLP techniques, introduction to LLMs, prompt engineering, and structured outputs. Build a text analysis system and upgrade it using LLMs.</p>
-                    </article>
-                    <article class="syllabus-item">
-                        <div class="syllabus-badge">Module 3</div>
-                        <h3>LLM Applications (RAG Systems)</h3>
-                        <p>Memory in AI, Retrieval-Augmented Generation, vector databases, failure modes of RAG, and Agentic RAG. Build a document Q&amp;A system.</p>
-                    </article>
-                    <article class="syllabus-item">
-                        <div class="syllabus-badge">Module 4</div>
-                        <h3>Agentic AI Systems</h3>
-                        <p>Agents, memory, tools, planning, Model Context Protocol (MCP), agent design patterns, evaluation and monitoring. Build an AI agent for real-world tasks.</p>
-                    </article>
-                    <article class="syllabus-item syllabus-item-accent">
-                        <p class="beyond-label">Industry Reading &amp; Discussion</p>
-                        <p>Dedicated sessions to read and discuss real industry AI use cases — how companies are actually deploying what you're learning.</p>
-                    </article>
-                </div>
-
-                <!-- Beyond the Curriculum -->
-                <div class="beyond-grid beyond-grid-2">
-                    <div class="beyond-card">
-                        <p class="beyond-label">Additional Benefits</p>
-                        <ul class="beyond-list">
-                            <li>Resume building with AI project framing</li>
-                            <li>GitHub portfolio guidance</li>
-                            <li>Mock interviews — <em>"How to explain your projects"</em></li>
-                        </ul>
+                <!-- Explicit Promise Boundaries Callout -->
+                <div class="promise-boundary-box">
+                    <div class="boundary-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="4.93" y1="4.93" x2="19.07" y2="19.07"/></svg>
                     </div>
-                    <div class="beyond-card">
-                        <p class="beyond-label">1:1 Mentor Sessions</p>
-                        <p class="beyond-desc">Weekly open sessions where you can bring problems, get unblocked, and discuss ideas directly with mentors.</p>
+                    <div class="boundary-content">
+                        <h4>What Is Explicitly Outside the 6-Week Promise?</h4>
+                        <p>
+                            We respect your time and do not make fake marketing claims. We do <strong>not</strong> promise mastery of:
+                            <em>autonomous agent swarms, training/fine-tuning foundation models, deep Kubernetes orchestration, or 10 different agent frameworks.</em>
+                            Those are advanced follow-ons. Our promise is singular: <strong>You will build, evaluate, deploy, and defend a real AI application.</strong>
+                        </p>
                     </div>
                 </div>
-
             </div>
         </section>
 
-        <!-- 3. INSTRUCTORS -->
-        <section id="instructors" class="section-light" aria-labelledby="instructors-title">
+        <!-- SECTION: KEY SKILLS YOU'LL GAIN (Matching 6 Icons in Poster) -->
+        <section id="skills" class="section-tint skills-section">
             <div class="container">
-                <div class="section-heading">
-                    <p class="section-kicker">Instructors</p>
-                    <h2 class="section-title" id="instructors-title">IIT, research, and industry depth.</h2>
-                    <p class="section-subtitle">Both instructors have served as Teaching Assistants at US universities.</p>
+                <div class="section-heading text-center">
+                    <p class="section-kicker">Tangible Outcomes</p>
+                    <h2 class="section-title">Key Skills You'll Gain</h2>
+                    <p class="section-subtitle">The six core pillars required by engineering teams building modern LLM applications.</p>
                 </div>
-                <div class="mentor-grid">
-                    <article class="mentor-card mentor-card-photo">
-                        <img src="viswarup_misra.png" alt="Viswarup Misra" class="mentor-photo" width="80" height="80" />
-                        <p class="mentor-tag">Lead Mentor</p>
-                        <h3>Viswarup Misra</h3>
-                        <p>IIT Kharagpur · MS USA · Ex-Amazon Data Scientist · Khorana Fellow</p>
-                        <a href="https://www.linkedin.com/in/viswarup-misra/" target="_blank" rel="noopener noreferrer" class="mentor-linkedin">LinkedIn ↗</a>
-                    </article>
-                    <article class="mentor-card mentor-card-photo">
-                        <div class="mentor-photo-placeholder">VM</div>
-                        <p class="mentor-tag">Mentor</p>
-                        <h3>Viswapriya Misra</h3>
-                        <p>B.Tech · M.S (USA) · Ex-Data Scientist, NIH</p>
-                    </article>
-                    <article class="mentor-card mentor-card-accent">
-                        <p class="mentor-tag">Extended Network</p>
-                        <h3>IIT &amp; FAANG contributors</h3>
-                        <p>Guest sessions from top-tier industry and research experts.</p>
-                    </article>
+
+                <div class="skills-grid">
+                    <!-- Skill 1 -->
+                    <div class="skill-card">
+                        <div class="skill-icon-bubble bubble-purple">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#7030a0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        </div>
+                        <h3>Document AI &amp; RAG</h3>
+                        <p>Document ingestion, optimal chunking, semantic vector search, BM25 hybrid retrieval, and source-grounded answers with citations.</p>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="skill-card">
+                        <div class="skill-icon-bubble bubble-green">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0f8a5f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                        </div>
+                        <h3>LLM App Development</h3>
+                        <p>Python API integration, Pydantic structured output validation, error handling, retries, and reproducible JSON schemas.</p>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="skill-card">
+                        <div class="skill-icon-bubble bubble-orange">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/><polyline points="4 8 10 2 16 8 22 2"/></svg>
+                        </div>
+                        <h3>Evaluation &amp; Testing</h3>
+                        <p>Curating golden datasets, automated regression testing, measuring retrieval accuracy, latency benchmarks, and cost profiling.</p>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="skill-card">
+                        <div class="skill-icon-bubble bubble-pink">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#db2777" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                        </div>
+                        <h3>AI Workflows &amp; Tool Use</h3>
+                        <p>Tool calling, state management, stateful checkpoints in LangGraph, and safe human-in-the-loop review escalation.</p>
+                    </div>
+
+                    <!-- Skill 5 -->
+                    <div class="skill-card">
+                        <div class="skill-icon-bubble bubble-blue">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        </div>
+                        <h3>Security &amp; Debugging</h3>
+                        <p>Prompt injection defenses, secret protection, tracing execution paths, diagnosing failed runs, and establishing system boundaries.</p>
+                    </div>
+
+                    <!-- Skill 6 -->
+                    <div class="skill-card">
+                        <div class="skill-icon-bubble bubble-cyan">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/><polyline points="12 12 12 16 12 12"/><polyline points="9 13 12 10 15 13"/></svg>
+                        </div>
+                        <h3>Deployment (Real-world Ready)</h3>
+                        <p>Packaging services with FastAPI and Docker, deploying accessible live instances, and presenting clear architectural trade-offs.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- 4. PRICING -->
-        <section id="pricing" class="section-tint" aria-labelledby="pricing-title">
+        <!-- SECTION: INSTRUCTORS & MENTORSHIP -->
+        <section id="instructors" class="section-light instructors-section">
             <div class="container">
-                <div class="pricing-card">
-                    <div>
-                        <p class="section-kicker">Pricing</p>
-                        <h2 class="section-title" id="pricing-title">Premium learning, intentionally accessible.</h2>
-                        <p class="pricing-anchor">5 weeks of live mentorship, real projects, and AI tool subscriptions — for less than a single industry coaching session.</p>
+                <div class="section-heading text-center">
+                    <p class="section-kicker">Experienced Mentorship</p>
+                    <h2 class="section-title">IIT, US Research &amp; Industry Depth</h2>
+                    <p class="section-subtitle">Mentors who have built AI systems at scale, published research, and taught university classes.</p>
+                </div>
+
+                <div class="instructors-grid">
+                    <!-- Lead Mentor -->
+                    <div class="instructor-card">
+                        <div class="instructor-photo-wrap">
+                            <img src="viswarup_misra.png" alt="Viswarup Misra" class="instructor-photo" width="96" height="96" />
+                        </div>
+                        <div class="instructor-info">
+                            <span class="mentor-badge">Lead Instructor</span>
+                            <h3 class="instructor-name">Viswarup Misra</h3>
+                            <p class="instructor-creds">IIT Kharagpur &middot; MS USA &middot; Ex-Amazon Data Scientist &middot; Khorana Fellow</p>
+                            <p class="instructor-bio">
+                                Former Teaching Assistant at US university. Extensive experience building enterprise AI applications, LLM pipelines, and computer vision systems. Direct 1-on-1 mentor for your weekly builds and capstone architecture.
+                            </p>
+                            <a href="https://www.linkedin.com/in/viswarup-misra/" target="_blank" rel="noopener noreferrer" class="linkedin-link">
+                                <span>LinkedIn Profile</span> &rarr;
+                            </a>
+                        </div>
                     </div>
-                    <div class="price-block">
-                        <p class="price-value">Rs. 5,999</p>
-                        <p class="price-note">Includes Claude Code / Codex / Antigravity subscription</p>
+
+                    <!-- Co-Mentor -->
+                    <div class="instructor-card">
+                        <div class="instructor-photo-wrap">
+                            <div class="photo-placeholder">VM</div>
+                        </div>
+                        <div class="instructor-info">
+                            <span class="mentor-badge">Mentor</span>
+                            <h3 class="instructor-name">Viswapriya Misra</h3>
+                            <p class="instructor-creds">B.Tech &middot; M.S (USA) &middot; Ex-Data Scientist, NIH</p>
+                            <p class="instructor-bio">
+                                Former Teaching Assistant at US university. Specialist in healthcare AI systems, high-dimensional data evaluation, and production reliability for mission-critical applications.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cohort Mentorship Promise -->
+                <div class="mentorship-features-row">
+                    <div class="m-feat-item">
+                        <strong>Max 8–12 Learners</strong>
+                        <span>Strict batch cap ensures your questions are answered and your code is reviewed.</span>
+                    </div>
+                    <div class="m-feat-item">
+                        <strong>Live Code Reviews</strong>
+                        <span>Weekly debugging sessions where we inspect actual failed runs and error logs.</span>
+                    </div>
+                    <div class="m-feat-item">
+                        <strong>Interview &amp; Work Guidance</strong>
+                        <span>Weekly exercises to explain design choices, defend trade-offs, and debug live.</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. FAQ -->
-        <section id="faq" class="section-light" aria-labelledby="faq-title">
+        <!-- SECTION: FOUNDING COHORT PRICING BANNER (Matching Poster Bottom Bar) -->
+        <section id="pricing" class="pricing-banner-section">
+            <div class="container">
+                <div class="poster-pricing-banner">
+                    <!-- Duration -->
+                    <div class="banner-stat-col">
+                        <div class="stat-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-label">Duration</span>
+                            <h3 class="stat-value">6 Weeks</h3>
+                            <p class="stat-sub">8–10 hours/week (Live sessions + labs)</p>
+                        </div>
+                    </div>
+
+                    <div class="banner-divider"></div>
+
+                    <!-- Cohort Size -->
+                    <div class="banner-stat-col">
+                        <div class="stat-icon-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-label">Cohort Size</span>
+                            <h3 class="stat-value">8 &ndash; 12 learners</h3>
+                            <p class="stat-sub">For personalized mentoring</p>
+                        </div>
+                    </div>
+
+                    <div class="banner-divider"></div>
+
+                    <!-- Founding Cohort Price -->
+                    <div class="banner-stat-col price-highlight-col">
+                        <div class="stat-icon-wrap currency-icon">
+                            <span>&#8377;</span>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-label">Founding Cohort Price</span>
+                            <div class="price-flex">
+                                <h3 class="stat-value price-main">&#8377;19,900</h3>
+                                <span class="price-strike">&#8377;29,900</span>
+                            </div>
+                            <p class="stat-sub text-green-accent">Early sign-ups get priority</p>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="banner-cta-col">
+                        <a href="https://forms.gle/cm8m2CEvvQC9V5Xk9" target="_blank" rel="noopener noreferrer" class="btn-gold-banner">
+                            <span>Join the Next Cohort</span> &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: TRUST BADGES (Matching Poster Footer Bar) -->
+        <section class="trust-badges-bar">
+            <div class="container trust-badges-grid">
+                <div class="trust-badge-item">
+                    <div class="tb-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="2" y1="20" x2="22" y2="20"/></svg>
+                    </div>
+                    <span><strong>Live Online</strong> (Flexible for India)</span>
+                </div>
+
+                <div class="trust-badge-item">
+                    <div class="tb-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <span><strong>Lifetime Access</strong> to Materials</span>
+                </div>
+
+                <div class="trust-badge-item">
+                    <div class="tb-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+                    </div>
+                    <span><strong>Mentorship</strong> During &amp; After Course</span>
+                </div>
+
+                <div class="trust-badge-item">
+                    <div class="tb-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+                    </div>
+                    <span><strong>Certificate</strong> of Completion</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: FAQ -->
+        <section id="faq" class="section-light faq-section">
             <div class="container faq-shell">
-                <div class="section-heading">
-                    <p class="section-kicker">FAQ</p>
+                <div class="section-heading text-center">
+                    <p class="section-kicker">Got Questions?</p>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Everything you need to know about joining the cohort.</p>
                 </div>
-                <div class="faq-list" role="list">
+
+                <div class="faq-list">
                     <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Who is this program for?</span>
+                        <button class="faq-question" aria-expanded="false" type="button">
+                            <span>What are the prerequisites for this course?</span>
                             <span class="faq-icon" aria-hidden="true"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>The program is designed for students and corporate professionals who want to build core AI skills through live instruction and practical work.</p>
+                            <p>You need basic Python proficiency (working with functions, dictionaries, and simple APIs). You do NOT need advanced machine learning theory, deep math, or PyTorch internals—we focus purely on modern application engineering with LLMs.</p>
                         </div>
                     </article>
+
                     <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Do I need to know coding, ML, or AI beforehand?</span>
+                        <button class="faq-question" aria-expanded="false" type="button">
+                            <span>How much time do I need to commit each week?</span>
                             <span class="faq-icon" aria-hidden="true"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>No. The program starts from the fundamentals and builds up. No prior experience in coding, machine learning, LLMs, or AI agents is required.</p>
+                            <p>Approximately 8 to 10 hours per week. This includes two live interactive sessions (evening/weekend), hands-on guided lab builds, code reviews, and independent project work.</p>
                         </div>
                     </article>
+
                     <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>How long is the program?</span>
+                        <button class="faq-question" aria-expanded="false" type="button">
+                            <span>What if I miss a live class?</span>
                             <span class="faq-icon" aria-hidden="true"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Edu AI offers workshops as well as 5-week live online cohorts.</p>
+                            <p>All live sessions are recorded and made available within a few hours. You get lifetime access to all lecture recordings, GitHub repositories, code templates, and golden datasets.</p>
                         </div>
                     </article>
+
                     <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>When does the next cohort start?</span>
+                        <button class="faq-question" aria-expanded="false" type="button">
+                            <span>Can I adapt the capstone project to my company's domain?</span>
                             <span class="faq-icon" aria-hidden="true"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>The next cohort starts on 25 May 2026.</p>
+                            <p>Yes, absolutely! While we provide the "Document Compliance &amp; Workflow Engine" reference project, working professionals are actively encouraged to bring their organization's internal documents or workflow challenges to build a customized, high-ROI internal tool.</p>
                         </div>
                     </article>
+
                     <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>What tool will we use during the course?</span>
+                        <button class="faq-question" aria-expanded="false" type="button">
+                            <span>How does this prepare job seekers for AI engineering interviews?</span>
                             <span class="faq-icon" aria-hidden="true"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Claude Code / Codex / Antigravity is taught during the course, and the subscription is included in the fee.</p>
+                            <p>Instead of generic coding questions, modern AI interviews ask you to explain design choices: "Why BM25 vs dense embeddings?", "How did you handle hallucinations?", "How do you benchmark retrieval quality?", and "What were your latency and token cost trade-offs?". Every week includes a dedicated interview breakdown where you practice defending these exact decisions.</p>
                         </div>
                     </article>
+
                     <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>How often are classes held?</span>
+                        <button class="faq-question" aria-expanded="false" type="button">
+                            <span>Why is cohort size limited to 8–12 learners?</span>
                             <span class="faq-icon" aria-hidden="true"></span>
                         </button>
                         <div class="faq-answer">
-                            <p>Classes are conducted every weekend so the format works for both students and working professionals.</p>
-                        </div>
-                    </article>
-                    <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>Why should I trust this program?</span>
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>The program emphasizes live classes, limited seats, direct mentor interaction, and real-world industry projects rather than passive learning.</p>
-                        </div>
-                    </article>
-                    <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>What if the program isn't the right fit?</span>
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Not the right fit? We'll refund after the first session — no questions asked.</p>
-                        </div>
-                    </article>
-                    <article class="faq-item">
-                        <button class="faq-question" aria-expanded="false">
-                            <span>How many students per cohort?</span>
-                            <span class="faq-icon" aria-hidden="true"></span>
-                        </button>
-                        <div class="faq-answer">
-                            <p>Only 10 seats per cohort. Small cohorts mean direct attention from instructors, meaningful code reviews, and real mentorship — not a lecture hall.</p>
+                            <p>Mass cohorts of 200+ students turn into passive webinar watching. We enforce a strict 8–12 cap so mentors can look directly at your code, debug edge cases with you, and give personalized guidance on your architecture.</p>
                         </div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- 6. APPLY -->
-        <section id="apply" class="section-light" aria-labelledby="apply-title">
-            <div class="container apply-centered">
-                <div class="apply-banner">
-                    <div>
-                        <p class="section-kicker">Apply Now</p>
-                        <h2 class="section-title" id="apply-title">Cohort starts 25 May 2026. Only 10 seats.</h2>
-                        <p class="apply-urgency">Small cohort = direct attention from your instructors. Reserve your seat now.</p>
+        <!-- SECTION: FINAL CTA -->
+        <section class="section-tint final-cta-section">
+            <div class="container text-center">
+                <div class="final-cta-card">
+                    <span class="cta-badge">Founding Cohort</span>
+                    <h2 class="cta-title">Build AI Systems That Work Beyond the Demo</h2>
+                    <p class="cta-subtitle">
+                        Six weeks of hands-on engineering, live mentorship, and a production-grade portfolio application.
+                    </p>
+                    <div class="cta-button-group">
+                        <a href="https://forms.gle/cm8m2CEvvQC9V5Xk9" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-large shadow-pulse">
+                            <span>Apply for Founding Cohort</span> &rarr;
+                        </a>
+                        <a href="https://wa.me/919938883652?text=Hi%2C%20I%20have%20questions%20about%20the%20Micro%20School%20AI%20Engineering%20Cohort." target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-large">
+                            <span>Chat on WhatsApp</span>
+                        </a>
                     </div>
-                    <a href="https://forms.gle/cm8m2CEvvQC9V5Xk9" target="_blank" rel="noopener noreferrer"
-                        class="btn btn-apply">Start Your Application</a>
-                </div>
-                <p class="apply-or">Or reach out directly</p>
-                <div class="apply-contact-row">
-                    <a href="https://wa.me/919220711331" target="_blank" rel="noopener noreferrer" class="contact-card">
-                        <div class="contact-icon whatsapp-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>WhatsApp</strong>
-                            <span>Chat with us instantly</span>
-                        </div>
-                    </a>
-                    <a href="tel:+919220711331" class="contact-card">
-                        <div class="contact-icon phone-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                stroke-linejoin="round">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                            </svg>
-                        </div>
-                        <div>
-                            <strong>Call Us</strong>
-                            <span>+91 9220711331 or +91 7827654254</span>
-                        </div>
-                    </a>
+                    <p class="cta-guarantee">Batch capped at 8–12 learners &bull; Priority review for early applicants</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="footer">
+    <!-- FOOTER -->
+    <footer id="footer" class="site-footer">
         <div class="container footer-content">
             <div class="footer-brand">
-                <a href="#hero" class="footer-logo">Edu <span>AI</span></a>
-                <p>&copy; 2026 Edu AI. All rights reserved.</p>
+                <div class="footer-logo-row">
+                    <span class="brand-name">Micro School</span>
+                </div>
+                <p class="footer-sub">Practical skills. Real impact. Teaching the core capabilities that power production AI applications.</p>
             </div>
-            <div class="footer-link">
-                <a href="https://www.eduai.co.in" target="_blank" rel="noopener noreferrer">www.eduai.co.in</a>
+            <div class="footer-links-group">
+                <a href="#curriculum">Curriculum</a>
+                <a href="#capstone">Capstone</a>
+                <a href="#instructors">Instructors</a>
+                <a href="#pricing">Pricing</a>
+                <a href="https://wa.me/919938883652" target="_blank" rel="noopener noreferrer">WhatsApp Support</a>
+                <a href="https://forms.gle/cm8m2CEvvQC9V5Xk9" target="_blank" rel="noopener noreferrer">Application Form</a>
             </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Micro School. All rights reserved.</p>
         </div>
     </footer>
 

@@ -6,22 +6,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const faqButtons = document.querySelectorAll(".faq-question");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  // Mobile menu management
   const setMenuState = (isOpen) => {
     if (!hamburger || !navLinks) return;
-
     hamburger.classList.toggle("active", isOpen);
     navLinks.classList.toggle("active", isOpen);
     hamburger.setAttribute("aria-expanded", String(isOpen));
-    document.body.classList.toggle("menu-open", isOpen);
   };
-
-  const handleScroll = () => {
-    if (!navbar) return;
-    navbar.classList.toggle("scrolled", window.scrollY > 32);
-  };
-
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  handleScroll();
 
   if (hamburger && navLinks) {
     hamburger.addEventListener("click", () => {
@@ -52,6 +43,15 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Sticky Navbar Scroll Behavior
+  const handleScroll = () => {
+    if (!navbar) return;
+    navbar.classList.toggle("scrolled", window.scrollY > 24);
+  };
+  window.addEventListener("scroll", handleScroll, { passive: true });
+  handleScroll();
+
+  // Smooth Scrolling for internal hash links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", (event) => {
       const targetId = anchor.getAttribute("href");
@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!target) return;
 
       event.preventDefault();
-
       target.scrollIntoView({
         behavior: prefersReducedMotion ? "auto" : "smooth",
         block: "start"
@@ -69,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  // Accordion FAQ Handling (Single-open pattern)
   faqButtons.forEach((button) => {
     button.addEventListener("click", () => {
       const item = button.closest(".faq-item");
@@ -86,38 +86,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // ── Program Tab Switching ──
-  const programTabs = document.querySelectorAll(".program-tab");
-  const programPanels = document.querySelectorAll(".program-panel");
-
-  programTabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const targetId = tab.getAttribute("aria-controls");
-
-      programTabs.forEach((t) => {
-        t.classList.remove("active");
-        t.setAttribute("aria-selected", "false");
-      });
-
-      programPanels.forEach((p) => {
-        p.classList.remove("active");
-        p.setAttribute("hidden", "");
-      });
-
-      tab.classList.add("active");
-      tab.setAttribute("aria-selected", "true");
-
-      const targetPanel = document.getElementById(targetId);
-      if (targetPanel) {
-        targetPanel.classList.add("active");
-        targetPanel.removeAttribute("hidden");
-      }
-    });
-  });
-
+  // Intersection Observer for Smooth Fade-in Animations
   if (!prefersReducedMotion) {
     const fadeTargets = document.querySelectorAll(
-      ".feature-card, .card, .outcome-item, .outcomes-panel, .mentor-card, .cohort-item, .syllabus-item, .pricing-card, .faq-item, .blog-card, .contact-card, .mini-card, .program-overview, .program-tabs, .program-tools"
+      ".journey-card, .feature-pill, .capstone-card-dark, .audience-card-light, .skill-card, .instructor-card, .poster-pricing-banner, .faq-item, .m-feat-item, .table-responsive"
     );
 
     fadeTargets.forEach((element) => element.classList.add("fade-in"));
@@ -132,8 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       },
       {
-        threshold: 0.15,
-        rootMargin: "0px 0px -40px 0px"
+        threshold: 0.12,
+        rootMargin: "0px 0px -30px 0px"
       }
     );
 
